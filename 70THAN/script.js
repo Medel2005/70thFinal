@@ -20,14 +20,57 @@ document.querySelectorAll('#navLinks a').forEach(a => {
 
 // Countdown Timer — Target: August 23, 2026 (Philippine Time)
 const targetDate = new Date('2026-08-23T00:00:00+08:00');
+let countdownEnded = false;
+
+function showAnniversaryMessage() {
+  const countdown = document.getElementById('countdown');
+
+  // Fade out the countdown
+  countdown.style.transition = 'opacity 1.5s ease';
+  countdown.style.opacity = '0';
+
+  setTimeout(() => {
+    // Swap content while invisible
+    countdown.innerHTML = `
+      <div style="
+        color: var(--gold);
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 24px 20px;
+        text-align: center;
+        flex: 1;
+        letter-spacing: 1px;
+        animation: cdPulse 2s ease-in-out infinite;
+      ">🎉 The Anniversary is Here!</div>
+    `;
+
+    // Add pulse keyframe if not already added
+    if (!document.getElementById('cd-pulse-style')) {
+      const style = document.createElement('style');
+      style.id = 'cd-pulse-style';
+      style.textContent = `
+        @keyframes cdPulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.04); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    // Fade back in
+    countdown.style.opacity = '1';
+  }, 1500);
+}
 
 function updateCountdown() {
+  if (countdownEnded) return;
+
   const now = new Date();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    document.getElementById('countdown').innerHTML =
-      '<div style="color:var(--gold);font-size:1.2rem;font-weight:700;padding:20px;text-align:center;flex:1;">🎉 The Anniversary is Here!</div>';
+    countdownEnded = true;
+    showAnniversaryMessage();
     return;
   }
 
@@ -36,7 +79,6 @@ function updateCountdown() {
   const minutes = Math.floor((diff % 3600000) / 60000);
   const seconds = Math.floor((diff % 60000) / 1000);
 
-  // These IDs match your HTML: cd-d, cd-h, cd-m, cd-s
   document.getElementById('cd-d').textContent = String(days).padStart(2, '0');
   document.getElementById('cd-h').textContent = String(hours).padStart(2, '0');
   document.getElementById('cd-m').textContent = String(minutes).padStart(2, '0');
