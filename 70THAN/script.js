@@ -18,25 +18,37 @@ document.querySelectorAll('#navLinks a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
 
-// Countdown (Target: August 23, 2026)
-const targetDate = new Date('2026-08-23T10:00:00');
+
+// Set your actual anniversary date here (Philippine Time)
+const anniversaryDate = new Date("2026-12-31T00:00:00+08:00"); // ← change this
+
 function updateCountdown() {
   const now = new Date();
-  const diff = targetDate - now;
+  const diff = anniversaryDate - now;
+
   if (diff <= 0) {
-    document.getElementById('countdown').innerHTML = '<div style="color:var(--gold);font-size:1.2rem;font-weight:700;padding:20px;text-align:center;flex:1;">🎉 The Anniversary is Here!</div>';
+    // Anniversary has arrived!
+    document.getElementById("days").textContent = "0";
+    document.getElementById("hours").textContent = "0";
+    document.getElementById("minutes").textContent = "0";
+    document.getElementById("seconds").textContent = "0";
     return;
   }
-  const days    = Math.floor(diff / 86400000);
-  const hours   = Math.floor((diff % 86400000) / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-  const seconds = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-d').textContent = String(days).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(hours).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(minutes).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(seconds).padStart(2,'0');
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
 }
-updateCountdown();
+
+// Update every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // run immediately on load
 setInterval(updateCountdown, 1000);
 
 // Scroll Reveal
