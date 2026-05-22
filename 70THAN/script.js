@@ -20,7 +20,7 @@ document.querySelectorAll('#navLinks a').forEach(a => {
 
 
 // Set your actual anniversary date here (Philippine Time)
-const anniversaryDate = new Date("2026-12-31T00:00:00+08:00"); // ← change this
+const anniversaryDate = new Date("2026-08-23T00:00:00+08:00"); // ← change this
 
 function updateCountdown() {
   const now = new Date();
