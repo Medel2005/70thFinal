@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <title>Davao City Foursquare Gospel Church — 70th Anniversary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== FOURSQUARE LOGO ===== */
+    .fs-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .fs-logo .sq {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+    /* Nav logo - compact */
+    .nav-fs-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-fs-squares {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .nav-fs-squares .sq {
+      width: 22px;
+      height: 22px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-fs-squares .sq svg {
+      display: block;
+    }
+    .nav-fs-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .nav-fs-text .nft-main {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .nav-fs-text .nft-main span {
+      color: #C9A84C;
+    }
+    .nav-fs-text .nft-sub {
+      font-size: 0.6rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    /* Footer logo */
+    .ft-fs-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .ft-fs-squares {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .ft-fs-squares .sq {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ft-fs-text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+    .ft-fs-text span { color: #C9A84C; }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .nav-fs-squares .sq { width: 18px; height: 18px; border-radius: 2px; }
+      .nav-fs-text .nft-main { font-size: 0.72rem; }
+      .nav-fs-text .nft-sub { display: none; }
+    }
+    @media (max-width: 400px) {
+      .nav-fs-squares { gap: 1px; }
+      .nav-fs-squares .sq { width: 15px; height: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles"></div>
+
+  <nav id="navbar">
+    <a href="#hero" class="nav-fs-logo">
+      <!-- 4 Colored Squares Logo -->
+      <div class="nav-fs-squares">
+        <!-- Red - Cross -->
+        <div class="sq" style="background:#c0392b;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="5" y="1" width="2" height="10" rx="0.5" fill="#f5edd6"/>
+            <rect x="1" y="4.5" width="10" height="2" rx="0.5" fill="#f5edd6"/>
+          </svg>
+        </div>
+        <!-- Yellow - Dove -->
+        <div class="sq" style="background:#d4a017;">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <ellipse cx="8" cy="8" rx="4" ry="2.5" fill="#f5edd6"/>
+            <path d="M4 6 Q7 2 11 4 Q9 5.5 8 7Z" fill="#f5edd6"/>
+            <circle cx="11" cy="4.5" r="2" fill="#f5edd6"/>
+            <path d="M2 9 Q0 11 1.5 13 Q4 11 5.5 9.5Z" fill="#f5edd6"/>
+          </svg>
+        </div>
+        <!-- Blue - Chalice -->
+        <div class="sq" style="background:#2c5fa8;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 1 L10 1 L8.5 5 Q6 7 3.5 5Z" fill="#f5edd6"/>
+            <rect x="5" y="5" width="2" height="4" rx="0.5" fill="#f5edd6"/>
+            <rect x="3" y="9" width="6" height="1.5" rx="0.5" fill="#f5edd6"/>
+          </svg>
+        </div>
+        <!-- Purple - Crown -->
+        <div class="sq" style="background:#7b5ea7;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <polygon points="1,9 1,4 3.5,6.5 6,2 8.5,6.5 11,4 11,9" fill="#f5edd6"/>
+            <rect x="1" y="9" width="10" height="2" rx="0.5" fill="#f5edd6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="nav-fs-text">
+        <div class="nft-main">Foursquare Gospel Church – <span>Davao</span> | 70th</div>
+        <span class="nft-sub">Celebrating 70 Years · 1956 – 2026</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Our Journey</a></li>
+      <li><a href="#mission">Mission & Vision</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>   
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-ornament"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-line"></div>
+        <span>70th Anniversary Celebration</span>
+        <div class="hero-badge-line"></div>
+      </div>
+      <div class="hero-number">70</div>
+      <div class="hero-years">Years of Faith · Love · Service </div>
+      <h1 class="hero-title">ADVANCING <em>TRANSFORMATION</em></h1>
+      <p class="hero-subtitle">Get ready for a powerful celebration filled with worship, memories, generations coming together, and testimonies of lives changed through the years. This is more than an anniversary — it's a celebration of everything God has done and everything He's still about to do.</p>
+      <div class="hero-btns">
+        <a href="#timeline" class="btn-gold">Explore Our Journey</a>
+        <a href="#contact" class="btn-ghost">Join the Celebration</a>
+      </div>
+      <div class="hero-countdown" id="countdown">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">00</span><span class="cd-label">Days</span><span class="cd-event">to Anniversary</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-label">Hours</span><span class="cd-event">&nbsp;</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-label">Minutes</span><span class="cd-event">&nbsp;</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-label">Seconds</span><span class="cd-event">&nbsp;</span></div>
+      </div>
+    </div>
+    <div class="hero-arc"></div>
+  </section>
+
+  <section id="about">
+    <div class="about-intro">
+      <div class="sec-tag">About Us</div>
+      <h2 class="sec-title">Who We Are</h2>
+      <div class="divider center"></div>
+      <p>For 70 years we have been a family rooted in Scripture, bound by love, and called to serve. Every generation has added a new chapter to our story — and yours is still being written.</p>
+    </div>
+
+    <div class="about-block" data-reveal>
+      <div class="img-frame">
+        <div class="img-inner">
+          <img src="222.jpg" alt="Our Story - Church History">
+        </div>
+        <div class="anniv-badge"><div class="ab-num">70</div><div class="ab-text">Years</div></div>
+      </div>
+      <div class="abt">
+        <h3>Our Story</h3>
+        <p>The story of Davao City Foursquare Gospel Church (DCFGC) is a testament to faith, growth, and community. Beginning with early Pentecostal tent revivals in the 1950s, the movement found fertile ground in Mindanao's "Land of Promise."</p>
+        <p>By the 1970s, the church fully nationalized under Filipino leadership, establishing its central home on Lopez Jaena Street. This mother church quickly became a spiritual engine for the region, accelerated by the founding of the Halls of Life Foursquare Bible College to train homegrown pastors.</p>
+      </div>
+    </div>
+
+    <div class="about-block reverse" data-reveal>
+      <div class="img-frame">
+        <div class="img-inner">
+          <img src="church-histroy.jpg" alt="Our Community - Church Family">
+        </div>
+      </div>
+      <div class="abt">
+        <h3>Our Community</h3>
+        <p>The community of Davao City Foursquare Gospel Church (DCFGC) is a vibrant, multi-generational spiritual family anchored at Lopez Jaena Street. Moving forward under the banner of "Advancing Transformation," our church serves as a sanctuary of hope, healing, and active fellowship across Davao City.</p>
+      </div>
+    </div>
+
+    <div class="about-block" data-reveal>
+      <div class="img-frame">
+        <div class="img-inner">
+          <img src="our-worship.jpg" alt="Our Worship - Praise and Worship">
+        </div>
+      </div>
+      <div class="abt">
+        <h3>Our Worship</h3>
+        <p>At Davao City Foursquare Gospel Church (DCFGC), worship is the vibrant heartbeat of our family. Rooted deeply on Lopez Jaena Street, our gatherings are a passionate celebration of God's presence, where believers unite with lifted hands and sincere hearts to honor Jesus Christ as our Savior, Baptizer, Healer, and Soon-Coming King.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="tl-header"><div class="sec-tag" style="justify-content:center;">Our Journey</div><h2 class="sec-title" style="color:#fff;">70 Years of Milestones</h2><div class="divider center"></div></div>
+    <div class="tl-wrap"><div class="tl-line"></div>
+      <div class="tl-item" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">1956 · Founded</div><h4>Period of Pioneering</h4><p>the Foursquare movement was in its "Period of Pioneering" in the Philippines. While the primary base of operations was Calvary Foursquare Church in Manila (registered in 1949), American missionaries and passionate Filipino tentmakers began looking south.</p></div></div>
+      <div class="tl-item right" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">1960s · Growth</div><h4>Period of Consolidation and Phenomenal Growth.</h4><p>the national church had grown to nearly 80 congregations nationwide. Crucially, the leadership realized that Mindanao was their most fertile ground.</p></div></div>
+      <div class="tl-item" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">1975 · Expansion</div><h4>Becoming Fully Filipino</h4><p>Just two years prior, in 1973, the denomination made the historic move to nationalize, officially registering as the Church of the Foursquare Gospel in the Philippines (CFGPI) under its first Filipino president.</p></div></div>
+      <div class="tl-item right" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">1990s · Revival</div><h4>The Rise of Centralized Megachurches</h4><p>the localized chapel model evolved into large, city-center "mother churches." The Davao City Foursquare Gospel Church on Lopez Jaena Street grew significantly during this decade, cementing its role as the administrative and spiritual center for the district.</p></div></div>
+      <div class="tl-item" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2010 · New Chapter</div><h4>50th Golden Jubilee National Convention of Foursquare Philippines.</h4><p>the national Foursquare movement was experiencing explosive growth, expanding toward thousands of churches nationwide.</p></div></div>
+      <div class="tl-item right" data-reveal><div class="tl-dot"></div><div class="tl-card"><div class="tl-year">2026 · Celebration</div><h4>Leading the National Stage</h4><p>Today, the Davao church is no longer just a regional powerhouse—it is actively shaping the national leadership of the entire denomination. The Senior Pastor of Davao City Foursquare Gospel Church, Rev. Daniel G. Feleo, serves as the National Vice President of CFGPI for the 2026–2028 term.</p></div></div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="mv-header">
+      <div class="sec-tag">Our Foundation</div>
+      <h2 class="sec-title">Mission, Vision & Core Values</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="mv-cards">
+      <div class="mv-card" data-reveal>
+        <span class="mv-icon">✝️</span>
+        <h3>Our Mission</h3>
+        <p>Davao City Foursquare Gospel Church is committed to teach, train, and nurture every person in the Word of God, producing authentic disciples, actively involved in Evangelism, Discipleship, Leadership Development, & Mission's Outreach regardless of status and nationality to bring life transforming impact in the community and the next generation.</p>
+      </div>
+      <div class="mv-card" data-reveal>
+        <span class="mv-icon">🌟</span>
+        <h3>Our Vision</h3>
+        <p>Well-equipped church engaged in intentional disciple-making, faithfully fulfilling the Great Commission for God's Glory!</p>
+      </div>
+      <div class="mv-card" data-reveal>
+        <span class="mv-icon">📖</span>
+        <h3>Our Core Values</h3>
+        <p>Spiritual Discipline: We value the Word of God and prayer. Wisdom of God: We value spiritual balance. Authenticity in lifestyle: We value stewardship, servanthood and integrity. Teamwork in Ministry: We value Partnership and Collaboration.</p>
+      </div>
+    </div>
+    <div class="values-row">
+      <div class="val-item"><div class="val-n">01</div><div class="val-l">Faith</div></div>
+      <div class="val-item"><div class="val-n">02</div><div class="val-l">Love</div></div>
+      <div class="val-item"><div class="val-n">03</div><div class="val-l">Service</div></div>
+      <div class="val-item"><div class="val-n">04</div><div class="val-l">Community</div></div>
+      <div class="val-item"><div class="val-n">05</div><div class="val-l">Prayer</div></div>
+      <div class="val-item"><div class="val-n">06</div><div class="val-l">Grace</div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="svc-header"><div class="sec-tag" style="justify-content:center;">Gather With Us</div><h2 class="sec-title">Service Schedule</h2><div class="divider center"></div></div>
+    <div class="svc-grid">
+      <div class="svc-card" data-reveal><div class="svc-icon">🌅</div><h3>First Service</h3><div class="svc-time">6:30 AM</div><p>Sunday · Sanctuary<br>A quiet, reflective start to worship.</p></div>
+      <div class="svc-card" data-reveal><div class="svc-icon">☀️</div><h3>Second Service</h3><div class="svc-time">9:30 AM</div><p>Sunday · Sanctuary<br>Our primary gathering for all families.</p></div>
+      <div class="svc-card" data-reveal><div class="svc-icon">🙌</div><h3>Third Service</h3><div class="svc-time">5:30 PM</div><p>Sunday · Sanctuary<br>Uplifting praise and relevant teaching.</p></div>
+      <div class="svc-card" data-reveal><div class="svc-icon">📖</div><h3>Midweek Service</h3><div class="svc-time">6:30 PM</div><p>Wednesday · Sanctuary<br>Deep dive into Scripture together.</p></div>
+      <div class="svc-card" data-reveal><div class="svc-icon">🙏</div><h3>Young Professional Fellowship</h3><div class="svc-time">7:00 PM</div><p>Friday · Thirthteen Eight<br>Corporate intercession and worship.</p></div>
+      <div class="svc-card" data-reveal><div class="svc-icon">👶</div><h3>Children's Church</h3><div class="svc-time">9:30 AM</div><p>Sunday · Playroom<br>Age-appropriate teaching, ages 3–12.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="sec-tag" style="justify-content:center;">Get In Touch</div>
+        <h2 class="sec-title">We'd Love to Hear From You</h2>
+        <div class="divider" style="margin:20px auto 24px;"></div>
+        <p class="contact-description">Whether you're joining us for the anniversary celebrations or visiting for the first time, our doors — and hearts — are always open.</p>
+        <div class="c-details">
+          <div class="c-item"><div class="c-icon">📍</div><div class="c-text"><h4>Address</h4><p>Lopez Jaena St., Davao City, Philippines, 8000</p></div></div>
+          <div class="c-item"><div class="c-icon">📞</div><div class="c-text"><h4>Phone</h4><p>(082) 227 4002</p></div></div>
+          <div class="c-item"><div class="c-icon">✉️</div><div class="c-text"><h4>Email</h4><p>fgc.davao@gmail.com</p></div></div>
+          <div class="c-item"><div class="c-icon">🕐</div><div class="c-text"><h4>Office Hours</h4><p>Tuesday – Saturday: 9:00 AM – 5:00 PM</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <!-- Footer Logo with 4 squares -->
+        <div class="ft-fs-logo">
+          <div class="ft-fs-squares">
+            <div class="sq" style="background:#c0392b;width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <svg width="16" height="16" viewBox="0 0 12 12" fill="none"><rect x="5" y="1" width="2" height="10" rx="0.5" fill="#f5edd6"/><rect x="1" y="4.5" width="10" height="2" rx="0.5" fill="#f5edd6"/></svg>
+            </div>
+            <div class="sq" style="background:#d4a017;width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-left:3px;">
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><ellipse cx="8" cy="8" rx="4" ry="2.5" fill="#f5edd6"/><path d="M4 6 Q7 2 11 4 Q9 5.5 8 7Z" fill="#f5edd6"/><circle cx="11" cy="4.5" r="2" fill="#f5edd6"/><path d="M2 9 Q0 11 1.5 13 Q4 11 5.5 9.5Z" fill="#f5edd6"/></svg>
+            </div>
+            <div class="sq" style="background:#2c5fa8;width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-left:3px;">
+              <svg width="16" height="16" viewBox="0 0 12 12" fill="none"><path d="M2 1 L10 1 L8.5 5 Q6 7 3.5 5Z" fill="#f5edd6"/><rect x="5" y="5" width="2" height="4" rx="0.5" fill="#f5edd6"/><rect x="3" y="9" width="6" height="1.5" rx="0.5" fill="#f5edd6"/></svg>
+            </div>
+            <div class="sq" style="background:#7b5ea7;width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-left:3px;">
+              <svg width="16" height="16" viewBox="0 0 12 12" fill="none"><polygon points="1,9 1,4 3.5,6.5 6,2 8.5,6.5 11,4 11,9" fill="#f5edd6"/><rect x="1" y="9" width="10" height="2" rx="0.5" fill="#f5edd6"/></svg>
+            </div>
+          </div>
+          <div class="ft-fs-text">Davao City <span>Foursquare Gospel</span> Church</div>
+        </div>
+        <p>A place of faith, hope, and love for all. Rooted in 70 years of God's faithfulness — and still growing.</p>
+        <div class="ft-anniv-txt"><span>✝️ 70th Anniversary · 1956 – 2026</span></div>
+      </div>
+      <div class="ft-col"><h4>Navigate</h4><ul><li><a href="#about">About Us</a></li><li><a href="#timeline">Our Journey</a></li><li><a href="#mission">Mission & Vision</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="ft-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/fgcdavao" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/fgcdavao/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@fgcdavao" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom"><p>© 2026 Davao City Foursquare Gospel Church · All rights reserved · 70 Years of God's Faithfulness 🙏</p></div>
+  </footer>
+
+  <div id="toast">✅ Message sent! We'll be in touch soon.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
