@@ -98,31 +98,38 @@ nav {
   min-width: 0;
 }
 .nav-fs-text .nft-main {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 .nav-fs-text .nft-main span { color: var(--gold); }
 .nft-arrow {
   color: #e07818;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   vertical-align: middle;
   margin: 0 1px;
   position: relative;
   top: -1px;
 }
 .nav-fs-text .nft-sub {
-  font-size: 0.58rem;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 0.8px;
+  font-size: 0.62rem;
+  color: var(--gold);
+  letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+  display: block;
+}
+/* Full subtitle — only on desktop */
+.nft-full {
+  display: inline;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
   font-weight: 400;
-  white-space: normal;
-  word-break: break-word;
-  max-width: 190px;
-  line-height: 1.4;
+  text-transform: none;
 }
 
 .nav-links {
@@ -366,7 +373,8 @@ footer { background:var(--deep); padding:60px 5% 28px; border-top:2px solid var(
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
-  .nav-fs-text .nft-main { font-size: 0.78rem; }
+  .nav-fs-text .nft-main { font-size: 0.82rem; }
+  .nav-fs-text .nft-sub { font-size: 0.58rem; }
 }
 
 @media (max-width: 900px) {
@@ -382,6 +390,10 @@ footer { background:var(--deep); padding:60px 5% 28px; border-top:2px solid var(
   nav .nav-links.open { display:flex; }
   .hamburger { display:flex; }
   .hero-countdown { flex-wrap:wrap; }
+  /* Hide "· A Journey to a Greater Purpose" on tablet/mobile */
+  .nft-full { display: none; }
+  .nav-fs-text .nft-main { font-size: 0.78rem; }
+  .nav-fs-text .nft-sub { font-size: 0.54rem; letter-spacing: 1.5px; display: block; }
 }
 
 @media (max-width: 768px) {
@@ -390,24 +402,23 @@ footer { background:var(--deep); padding:60px 5% 28px; border-top:2px solid var(
   .c-item { gap:14px; }
   .c-icon { width:44px; height:44px; font-size:1.2rem; border-radius:14px; }
   .c-text p { font-size:0.85rem; }
-  /* Logo adjustments for mid-size phones */
   .nav-fs-squares .sq { width:20px; height:20px; border-radius:2px; }
-  .nav-fs-text .nft-main { font-size:0.72rem; }
-  .nav-fs-text .nft-sub { font-size:0.55rem; letter-spacing:1px; }
+  .nav-fs-text .nft-main { font-size: 0.7rem; }
+  .nav-fs-text .nft-sub { font-size: 0.5rem; letter-spacing: 1px; display: block; }
 }
 
 @media (max-width: 480px) {
-  /* Very small phones - hide subtitle, shrink squares */
   .nav-fs-squares .sq { width:16px; height:16px; border-radius:2px; }
   .nav-fs-squares { gap:1px; }
-  .nav-fs-logo { gap:7px; }
-  .nav-fs-text .nft-main { font-size:0.65rem; }
-  .nav-fs-text .nft-sub { display:none; }
+  .nav-fs-logo { gap:6px; }
+  .nav-fs-text .nft-main { font-size: 0.63rem; }
+  .nav-fs-text .nft-sub { font-size: 0.48rem; letter-spacing: 0.8px; display: block; }
 }
 
 @media (max-width: 360px) {
-  .nav-fs-text .nft-main { font-size:0.58rem; }
   .nav-fs-squares .sq { width:13px; height:13px; }
+  .nav-fs-text .nft-main { font-size: 0.56rem; }
+  .nav-fs-text .nft-sub { font-size: 0.44rem; display: block; }
 }
 
 /* Reveal animations */
@@ -417,22 +428,4 @@ footer { background:var(--deep); padding:60px 5% 28px; border-top:2px solid var(
 }
 [data-reveal].revealed, .mv-card.revealed, .svc-card.revealed, .tl-item.revealed {
   opacity:1; transform:translateY(0);
-}
-/* ===== NAV LOGO MOBILE FIXES ===== */
-@media (max-width: 480px) {
-  .nav-fs-text .nft-main { font-size: 0.72rem; }
-  .nav-fs-text .nft-sub {
-    font-size: 0.48rem;
-    max-width: 140px;
-    letter-spacing: 0.5px;
-  }
-  .nav-fs-squares .sq { width: 16px; height: 16px; }
-  .nav-fs-squares { gap: 1px; }
-  .nav-fs-logo { gap: 6px; }
-}
-
-@media (max-width: 380px) {
-  .nav-fs-text .nft-main { font-size: 0.65rem; }
-  .nav-fs-text .nft-sub { max-width: 110px; font-size: 0.44rem; }
-  .nav-fs-squares .sq { width: 13px; height: 13px; }
 }
